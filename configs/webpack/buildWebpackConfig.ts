@@ -1,13 +1,13 @@
-import path from 'path'
 import webpack from 'webpack'
 import { BuildOptions } from './types/config'
+import { getWpDevServer } from './wpDevServer'
 import { getWpLoaders } from './wpLoaders'
 import { getWpPlugins } from './wpPlugins'
 import { getWpResolves } from './wpResolves'
 
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
-    const { mode, paths } = options
+    const { mode, paths, isDev } = options
 
     return {
         mode: mode,
@@ -20,5 +20,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         plugins: getWpPlugins(options),
         module: getWpLoaders(),
         resolve: getWpResolves(),
+        devtool: isDev ? 'inline-source-map' : undefined,
+        devServer:  isDev ?  getWpDevServer(options) : undefined
     }
 }
