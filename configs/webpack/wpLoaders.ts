@@ -7,9 +7,22 @@ export function getWpLoaders(): webpack.RuleSetRule {
         exclude: /node_modules/
     }
 
+    const styleLoaders = {
+        test: /\.s[ac]ss$/i,
+        use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+        ],
+    }
+
     return {
         rules: [
-            typescriptLoader
+            typescriptLoader,
+            styleLoaders
         ],
     }
 }
