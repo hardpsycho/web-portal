@@ -7,7 +7,7 @@
         "jsx": "react-jsx",
         "allowJs": true,
         "moduleResolution": "node",
-        // fro imports
+        // for imports
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true
     },

@@ -1,11 +1,11 @@
 import { Suspense } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
-import { classNames } from './helpers/classNames/classNames'
-import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy'
-import { MainPageLazy } from './pages/MainPage/MainPage.lazy'
+import { classNames } from '../helpers/classNames/classNames'
+import { AboutPageLazy } from '../pages/AboutPage/AboutPage.lazy'
+import { MainPageLazy } from '../pages/MainPage/MainPage.lazy'
 import './styles/index.scss'
-import { useTheme } from './theme/useTheme'
+import { useTheme } from './providers/ThemeProvider/lib/useTheme'
 
 export const App = () => {
     const {currentTheme, toggleTheme} = useTheme()
