@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { LS_THEME_KEY, Theme, ThemeContext } from "./ThemeContext"
+import { LS_THEME_KEY, Theme, ThemeContext } from "./themeContext"
 
 export interface UseThemeReturn {
     currentTheme: Theme
