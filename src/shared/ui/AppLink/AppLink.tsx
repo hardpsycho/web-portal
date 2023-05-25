@@ -3,31 +3,31 @@ import { classNames } from 'shared/libs/classNames'
 import styles from './AppLink.m.scss'
 import { Link, LinkProps } from 'react-router-dom'
 
-export const AppLinkTheme = {
+export const AppLinkVariant = {
     PRIMARY: 'primary',
     SECONDARY: 'secondary'
 } as const
 
-export type AppLinkTheme = typeof AppLinkTheme[keyof typeof AppLinkTheme]
+export type AppLinkVariant = typeof AppLinkVariant[keyof typeof AppLinkVariant]
 
 interface AppLinkProps extends LinkProps {
     className?: string
-    theme?: AppLinkTheme
+    variant?: AppLinkVariant
 }
 
 export const AppLink: FC<AppLinkProps> = (props) => {
     const { 
         children,
         to,
-        className,
-        theme = AppLinkTheme.PRIMARY,
+        className = '',
+        variant = AppLinkVariant.PRIMARY,
         ...other
     } = props
 
     return (
         <Link 
             to={to}
-            className={classNames(styles.appLink, [className, styles[theme]])}
+            className={classNames(styles.appLink, [className, styles[variant]])}
             {...other}
         >
             {children}
