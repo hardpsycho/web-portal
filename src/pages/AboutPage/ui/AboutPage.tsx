@@ -2,9 +2,9 @@ import type { FC } from 'react'
 
 const AboutPage: FC = () => {
     return (
-        <div>
+        <>
             AboutPage
-        </div>
+        </>
     )
 }
 

@@ -10,11 +10,11 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = ({ className = '' }) => {
 
     return (
-        <div className={classNames(styles.navbar, [className])}>
+        <header className={classNames(styles.navbar, [className])}>
             <div className={classNames(styles.menu)}>
                 <AppLink className={classNames(styles.link)} to='/'>Главная</AppLink>
                 <AppLink className={classNames(styles.link)} to='/about'>О нас</AppLink>
             </div>
-        </div>
+        </header>
     )
 }

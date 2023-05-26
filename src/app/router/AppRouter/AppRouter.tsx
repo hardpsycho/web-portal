@@ -3,12 +3,14 @@ import { routerConfig } from '../config/routerConfig'
 
 export const AppRouter = () => {
   return (
-    <Routes>
-        {
-            Object.values(routerConfig).map(({path, element}) => {
-                return <Route key={path} path={path} element={element} />
-            })
-        }
-    </Routes>
+    <main className={'main-content'}>
+        <Routes>
+            {
+                Object.values(routerConfig).map(({path, element}) => {
+                    return <Route key={path} path={path} element={element} />
+                })
+            }
+        </Routes>
+    </main>
   )
 }
