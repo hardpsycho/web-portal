@@ -46,10 +46,10 @@ export function getWpLoaders(options: BuildOptions): webpack.RuleSetRule {
 
     return {
         rules: [
-            typescriptLoader,
-            styleLoaders,
+            imageLoader,
             svgLoader,
-            imageLoader
-        ],
+            typescriptLoader,
+            styleLoaders
+        ]
     }
 }

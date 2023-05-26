@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { classNames } from 'shared/libs/classNames/classNames'
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
 import { Navbar } from 'widgets/Navbar'
 import { useTheme } from './providers/ThemeProvider/lib/useTheme'
 import { AppRouter } from './router'
@@ -13,7 +14,7 @@ export const App = () => {
             <Suspense fallback='<div>Loading...</div>'>
                 <Navbar />
                 <AppRouter />
-                <button onClick={toggleTheme}>Сменить тему</button>
+                <ThemeSwitcher />
             </Suspense>
         </div>
     )
