@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BuildOptions } from './types/config'
 
-export function getWpPlugins({ paths }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function getWpPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
     return [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
@@ -13,5 +13,8 @@ export function getWpPlugins({ paths }: BuildOptions): webpack.WebpackPluginInst
             filename: 'css/[name].[contenthash]:6.css',
             chunkFilename: 'css/[name].[contenthash]:6.css'
         }),
+        new webpack.DefinePlugin({
+            __IS_DEV__: isDev
+        })
     ]
 }

@@ -5,6 +5,7 @@ import { Sidebar } from 'widgets/Sidebar'
 import { useTheme } from './providers/ThemeProvider/lib/useTheme'
 import { AppRouter } from './router'
 import './styles/index.scss'
+import 'shared/config/i18n/config'
 
 export const App = () => {
     const { currentTheme}  = useTheme()
