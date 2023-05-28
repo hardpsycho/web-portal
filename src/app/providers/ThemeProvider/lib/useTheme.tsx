@@ -6,8 +6,14 @@ export interface UseThemeReturn {
     toggleTheme: () => void
 }
 
-export const useTheme = (): UseThemeReturn => {
-    const {currentTheme, setTheme} = useContext(ThemeContext)
+export const useTheme = (): UseThemeReturn=> {
+    const ThemeContextData = useContext(ThemeContext)
+
+    if(!ThemeContextData){
+        throw new Error('Something went wrong. Context is null')
+    }
+
+    const { currentTheme, setTheme } = ThemeContextData
     const newTheme = currentTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
 
     const toggleTheme = () => {
@@ -15,6 +21,6 @@ export const useTheme = (): UseThemeReturn => {
         localStorage.setItem(LS_THEME_KEY, newTheme)
     }
 
-
     return {currentTheme, toggleTheme}
 }
+
