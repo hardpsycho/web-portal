@@ -8,7 +8,8 @@ export const AppLinkVariant = {
     SECONDARY: 'secondary'
 } as const
 
-export type AppLinkVariant = typeof AppLinkVariant[keyof typeof AppLinkVariant]
+export type AppLinkVariant =
+    (typeof AppLinkVariant)[keyof typeof AppLinkVariant]
 
 interface AppLinkProps extends LinkProps {
     className?: string
@@ -16,7 +17,7 @@ interface AppLinkProps extends LinkProps {
 }
 
 export const AppLink: FC<AppLinkProps> = (props) => {
-    const { 
+    const {
         children,
         to,
         className = '',
@@ -25,7 +26,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     } = props
 
     return (
-        <Link 
+        <Link
             to={to}
             className={classNames(styles.appLink, [className, styles[variant]])}
             {...other}

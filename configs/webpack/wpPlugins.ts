@@ -1,10 +1,13 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import ReactRefreshWebpackPlugin from'@pmmmwh/react-refresh-webpack-plugin'
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BuildOptions } from './types/config'
 
-export function getWpPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function getWpPlugins({
+    paths,
+    isDev
+}: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins = [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
@@ -19,7 +22,7 @@ export function getWpPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         })
     ]
 
-    if(isDev) {
+    if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin())
     }
 

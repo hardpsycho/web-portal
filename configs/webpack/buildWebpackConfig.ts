@@ -5,8 +5,9 @@ import { getWpLoaders } from './wpLoaders'
 import { getWpPlugins } from './wpPlugins'
 import { getWpResolves } from './wpResolves'
 
-
-export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
+export function buildWebpackConfig(
+    options: BuildOptions
+): webpack.Configuration {
     const { mode, paths, isDev } = options
 
     return {
@@ -21,6 +22,6 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         module: getWpLoaders(options),
         resolve: getWpResolves(options),
         devtool: isDev ? 'inline-source-map' : undefined,
-        devServer:  isDev ?  getWpDevServer(options) : undefined
+        devServer: isDev ? getWpDevServer(options) : undefined
     }
 }

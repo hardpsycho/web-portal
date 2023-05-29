@@ -6,6 +6,6 @@ export function getWpResolves(options: BuildOptions): webpack.ResolveOptions {
         extensions: ['.tsx', '.ts', '.js'],
         modules: [options.paths.src, 'node_modules'],
         preferAbsolute: true,
-        alias: {},
+        alias: {}
     }
 }

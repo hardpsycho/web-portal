@@ -10,7 +10,9 @@
     "lint:ts": "eslint **/*.{ts,tsx}",
     "lint:ts:fix": "eslint **/*.{ts,tsx} --fix",
     "lint:scss": "stylelint **/*.scss",
-    "lint:scss:fix": "stylelint **/*.scss --fix"
+    "lint:scss:fix": "stylelint **/*.scss --fix",
+    "prettier:check": "npx prettier --check **/*.{tsx,ts,js,jsx,scss,css,html}",
+    "prettier:fix": "npx prettier --write **/*.{tsx,ts,js,jsx,scss,css,html}"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +32,7 @@
     "eslint-plugin-react": "^7.32.2",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "prettier": "2.8.8",
     "react-refresh-typescript": "^2.0.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",

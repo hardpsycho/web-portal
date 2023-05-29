@@ -4,12 +4,12 @@ import styles from './Button.m.scss'
 import type { ButtonHTMLAttributes, FC } from 'react'
 
 export const ButtonVariant = {
-    CLEAR: 'clear',
+    CLEAR: 'clear'
 } as const
 
-export type ButtonVariant = typeof ButtonVariant[keyof typeof ButtonVariant]
+export type ButtonVariant = (typeof ButtonVariant)[keyof typeof ButtonVariant]
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
     variant?: ButtonVariant
 }

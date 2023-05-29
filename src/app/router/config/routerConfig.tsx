@@ -1,13 +1,13 @@
-import { AboutPage } from "pages/AboutPage"
-import { MainPage } from "pages/MainPage"
-import { ReactNode } from "react"
+import { AboutPage } from 'pages/AboutPage'
+import { MainPage } from 'pages/MainPage'
+import { ReactNode } from 'react'
 
 const AppRoutes = {
     MAIN: '/',
-    ABOUT: '/about',
+    ABOUT: '/about'
 } as const
 
-type AppRoutes = typeof AppRoutes[keyof typeof AppRoutes]
+type AppRoutes = (typeof AppRoutes)[keyof typeof AppRoutes]
 
 interface RouterConfiguration {
     path: AppRoutes

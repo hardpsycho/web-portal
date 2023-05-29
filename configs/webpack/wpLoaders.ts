@@ -11,21 +11,21 @@ export function getWpLoaders(options: BuildOptions): webpack.RuleSetRule {
         options: {
             getCustomTransformers: () => ({
                 before: [ReactRefreshTypeScript()]
-            }),
+            })
         }
     }
 
     const svgLoader = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
-        use: ['@svgr/webpack'],
+        use: ['@svgr/webpack']
     }
 
     const imageLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
             {
-                loader: 'file-loader',
+                loader: 'file-loader'
             }
         ]
     }
@@ -47,15 +47,10 @@ export function getWpLoaders(options: BuildOptions): webpack.RuleSetRule {
                 }
             },
             'sass-loader'
-        ],
+        ]
     }
 
     return {
-        rules: [
-            imageLoader,
-            svgLoader,
-            typescriptLoader,
-            styleLoaders
-        ]
+        rules: [imageLoader, svgLoader, typescriptLoader, styleLoaders]
     }
 }
