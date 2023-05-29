@@ -9,7 +9,7 @@ const AppRoutes = {
 
 type AppRoutes = typeof AppRoutes[keyof typeof AppRoutes]
 
-type RouterConfiguration = {
+interface RouterConfiguration {
     path: AppRoutes
     element: ReactNode
 }

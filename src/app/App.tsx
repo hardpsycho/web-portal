@@ -8,17 +8,17 @@ import './styles/index.scss'
 import 'shared/config/i18n/config'
 
 export const App = () => {
-    const { currentTheme}  = useTheme()
+    const { currentTheme }  = useTheme()
 
-    return (
-        <div className={classNames('app', [currentTheme])}>
-            <Suspense fallback='<div>Loading...</div>'>
-                <Navbar />
-                <div className={'page'}>
-                    <Sidebar />
-                    <AppRouter />
-                </div>
-            </Suspense>
+return (
+<div className={classNames('app', [currentTheme])}>
+    <Suspense fallback='<div>Loading...</div>'>
+        <Navbar />
+        <div className={'page'}>
+            <Sidebar />
+            <AppRouter />
         </div>
-    )
+    </Suspense>
+</div>
+)
 }

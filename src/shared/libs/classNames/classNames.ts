@@ -4,7 +4,7 @@ export function classNames(mainClass: string, additionClasses: string[] = [], mo
     return [
         mainClass,
         ...additionClasses,
-        ...Object.entries(mods).filter(([cls, mod]) => mod ).map(([cls]) => cls)
+        ...Object.entries(mods).filter(arr => arr[1]).map(([cls]) => cls)
     ]
         .join(' ')
 }
