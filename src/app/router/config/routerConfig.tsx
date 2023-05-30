@@ -1,10 +1,12 @@
+import { type ReactNode } from 'react'
 import { AboutPage } from 'pages/AboutPage'
 import { MainPage } from 'pages/MainPage'
-import { ReactNode } from 'react'
+import { NotFoundPage } from 'pages/NotFoundPage'
 
 const AppRoutes = {
     MAIN: '/',
-    ABOUT: '/about'
+    ABOUT: '/about',
+    NOT_FOUND: '/*'
 } as const
 
 type AppRoutes = (typeof AppRoutes)[keyof typeof AppRoutes]
@@ -22,5 +24,11 @@ export const routerConfig: Record<AppRoutes, RouterConfiguration> = {
     [AppRoutes.ABOUT]: {
         path: '/about',
         element: <AboutPage />
+    },
+
+    // последний элемень
+    [AppRoutes.NOT_FOUND]: {
+        path: '/*',
+        element: <NotFoundPage />
     }
 }

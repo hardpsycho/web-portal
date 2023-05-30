@@ -73,7 +73,6 @@ module.exports = {
                     attributes: false
                 }
             }
-        ],
-        "max-len": ["error", { "code": 100 }]
+        ]
     }
 }

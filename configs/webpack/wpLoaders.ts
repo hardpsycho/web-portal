@@ -42,7 +42,8 @@ export function getWpLoaders(options: BuildOptions): webpack.RuleSetRule {
                             ? '[path]/[local]__[hash:base64:3]'
                             : '[hash:base64:6]',
                         auto: /\.(module|m)\.\w+$/i,
-                        exportLocalsConvention: 'camelCase' // in Components camelCase, but in scss and css with dash
+                        // in Components camelCase, but in scss and css with dash
+                        exportLocalsConvention: 'camelCase'
                     }
                 }
             },

@@ -4,6 +4,7 @@ import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { useTheme } from './providers/ThemeProvider/lib/useTheme'
 import { AppRouter } from './router'
+import { CircleLoader } from 'shared/ui/CircleLoader'
 import './styles/index.scss'
 import 'shared/config/i18n/config'
 
@@ -12,7 +13,7 @@ export const App = () => {
 
     return (
         <div className={classNames('app', [currentTheme])}>
-            <Suspense fallback="<div>Loading...</div>">
+            <Suspense fallback={<CircleLoader className="main-loader" />}>
                 <Navbar />
                 <div className={'page'}>
                     <Sidebar />
