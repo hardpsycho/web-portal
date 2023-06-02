@@ -1,0 +1,18 @@
+.page-with-error {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    color: var(--inverted-bg-color)
+}
+
+.refresh-button {
+    border: 2px solid blueviolet;
+    background: none;
+    padding: 20px 40px;
+    color: blueviolet;
+    font-size: 24px;
+    text-transform: uppercase;
+}

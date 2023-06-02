@@ -2,5 +2,7 @@
     "язык": "RU",
     "главная": "Main page",
     "о_нас": "About page",
-    "страница_не_найдена": "Page not found"
+    "страница_не_найдена": "Page not found",
+    "страница_с_ошибкой": "Something went wrong. Try reload page please",
+    "обновить": "Reload"
 }
