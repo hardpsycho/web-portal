@@ -3,16 +3,18 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshTypeScript from 'react-refresh-typescript'
 import { BuildOptions } from './types/config'
 
-export function getWpLoaders(options: BuildOptions): webpack.RuleSetRule {
+export function getWpLoaders({ isDev }: BuildOptions): webpack.RuleSetRule {
     const typescriptLoader = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
-        options: {
-            getCustomTransformers: () => ({
-                before: [ReactRefreshTypeScript()]
-            })
-        }
+        options: isDev
+            ? {
+                  getCustomTransformers: () => ({
+                      before: [ReactRefreshTypeScript()]
+                  })
+              }
+            : undefined
     }
 
     const svgLoader = {
@@ -33,12 +35,12 @@ export function getWpLoaders(options: BuildOptions): webpack.RuleSetRule {
     const styleLoaders = {
         test: /\.s[ac]ss$/i,
         use: [
-            options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
                 loader: 'css-loader',
                 options: {
                     modules: {
-                        localIdentName: options.isDev
+                        localIdentName: isDev
                             ? '[path]/[local]__[hash:base64:3]'
                             : '[hash:base64:6]',
                         auto: /\.(module|m)\.\w+$/i,
