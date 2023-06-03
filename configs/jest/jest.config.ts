@@ -44,7 +44,17 @@ export default {
     testMatch: [
         '**/__tests__/**/*.[jt]s?(x)',
         '<rootDir>src/**/*(*.)+(spec|test).[tj]s?(x)'
-    ]
+    ],
+
+    // for absolute paths in test files
+    modulePaths: ['<rootDir>/src'],
+
+    setupFilesAfterEnv: ['<rootDir>/configs/jest/jest-setup.ts'],
+
+    moduleNameMapper: {
+        '\\.s?css$': '<rootDir>/configs//jest/styleMock.ts',
+        '\\.svg$': '<rootDir>/configs//jest/emptyComponent.tsx'
+    }
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
