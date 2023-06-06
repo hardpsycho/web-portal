@@ -4,7 +4,8 @@ import styles from './Button.m.scss'
 import type { ButtonHTMLAttributes, FC } from 'react'
 
 export const ButtonVariant = {
-    CLEAR: 'clear'
+    CLEAR: 'clear',
+    OUTLINE: 'outline'
 } as const
 
 export type ButtonVariant = (typeof ButtonVariant)[keyof typeof ButtonVariant]

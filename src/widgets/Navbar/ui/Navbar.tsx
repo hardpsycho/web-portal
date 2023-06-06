@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/libs/classNames'
-import { AppLink } from 'shared/ui/AppLink'
+import { AppLink, AppLinkVariant } from 'shared/ui/AppLink'
 import styles from './Navbar.m.scss'
 
 interface NavbarProps {
@@ -14,10 +14,18 @@ export const Navbar: FC<NavbarProps> = ({ className = '' }) => {
     return (
         <header className={classNames(styles.navbar, [className])}>
             <div className={classNames(styles.menu)}>
-                <AppLink className={classNames(styles.link)} to="/">
+                <AppLink
+                    variant={AppLinkVariant.INVERTED_PRIMARY}
+                    className={classNames(styles.link)}
+                    to="/"
+                >
                     {t('главная')}
                 </AppLink>
-                <AppLink className={classNames(styles.link)} to="/about">
+                <AppLink
+                    variant={AppLinkVariant.INVERTED_PRIMARY}
+                    className={classNames(styles.link)}
+                    to="/about"
+                >
                     {t('о_нас')}
                 </AppLink>
             </div>

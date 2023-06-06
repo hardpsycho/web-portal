@@ -5,7 +5,9 @@ import { Link, LinkProps } from 'react-router-dom'
 
 export const AppLinkVariant = {
     PRIMARY: 'primary',
-    SECONDARY: 'secondary'
+    SECONDARY: 'secondary',
+    INVERTED_PRIMARY: 'inverted-primary',
+    INVERTED_SECONDARY: 'inverted-secondary',
 } as const
 
 export type AppLinkVariant =
@@ -27,9 +29,9 @@ export const AppLink: FC<AppLinkProps> = (props) => {
 
     return (
         <Link
-            to={to}
-            className={classNames(styles.appLink, [className, styles[variant]])}
             {...other}
+            to={to}
+            className={classNames('', [className, styles[variant]])}
         >
             {children}
         </Link>
