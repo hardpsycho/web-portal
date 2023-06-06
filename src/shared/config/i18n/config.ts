@@ -8,6 +8,7 @@ i18n.use(Backend)
     .use(initReactI18next)
     .init({
         fallbackLng: 'ru',
+        supportedLngs: ['ru', 'en'],
         debug: __IS_DEV__,
 
         interpolation: {

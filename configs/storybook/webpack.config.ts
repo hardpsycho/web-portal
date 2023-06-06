@@ -42,15 +42,12 @@ export default ({ config }: { config: webpack.Configuration }) => {
     // добавляем свое правило для svg
     config.module?.rules?.push(getSvgLoader())
 
-    console.log(config.plugins)
     //добавляем definePlugin
     config.plugins?.push(
         new webpack.DefinePlugin({
             __IS_DEV__: false
         })
     )
-
-    console.log(config.plugins)
 
     return config
 }
