@@ -7,7 +7,7 @@ export const AppLinkVariant = {
     PRIMARY: 'primary',
     SECONDARY: 'secondary',
     INVERTED_PRIMARY: 'inverted-primary',
-    INVERTED_SECONDARY: 'inverted-secondary',
+    INVERTED_SECONDARY: 'inverted-secondary'
 } as const
 
 export type AppLinkVariant =

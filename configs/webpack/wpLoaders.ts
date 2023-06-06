@@ -1,9 +1,13 @@
 import webpack from 'webpack'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshTypeScript from 'react-refresh-typescript'
 import { BuildOptions } from './types/config'
+import { getStyleLoader } from './loaders/styleLoader'
+import { getSvgLoader } from './loaders/svgLoader'
 
 export function getWpLoaders({ isDev }: BuildOptions): webpack.RuleSetRule {
+    const styleLoader = getStyleLoader(isDev)
+    const svgLoader = getSvgLoader()
+
     const typescriptLoader = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
@@ -17,12 +21,6 @@ export function getWpLoaders({ isDev }: BuildOptions): webpack.RuleSetRule {
             : undefined
     }
 
-    const svgLoader = {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        use: ['@svgr/webpack']
-    }
-
     const imageLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -32,28 +30,7 @@ export function getWpLoaders({ isDev }: BuildOptions): webpack.RuleSetRule {
         ]
     }
 
-    const styleLoaders = {
-        test: /\.s[ac]ss$/i,
-        use: [
-            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-            {
-                loader: 'css-loader',
-                options: {
-                    modules: {
-                        localIdentName: isDev
-                            ? '[path]/[local]__[hash:base64:3]'
-                            : '[hash:base64:6]',
-                        auto: /\.(module|m)\.\w+$/i,
-                        // in Components camelCase, but in scss and css with dash
-                        exportLocalsConvention: 'camelCase'
-                    }
-                }
-            },
-            'sass-loader'
-        ]
-    }
-
     return {
-        rules: [imageLoader, svgLoader, typescriptLoader, styleLoaders]
+        rules: [imageLoader, svgLoader, typescriptLoader, styleLoader]
     }
 }
