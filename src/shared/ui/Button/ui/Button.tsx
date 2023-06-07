@@ -7,7 +7,7 @@ export const ButtonVariant = {
     CLEAR: 'clear',
     OUTLINE: 'outline',
     BACKGROUND: 'background',
-    BACKGROUND_INVERTED: 'background-inverted',
+    BACKGROUND_INVERTED: 'background-inverted'
 } as const
 
 export type ButtonVariant = (typeof ButtonVariant)[keyof typeof ButtonVariant]
@@ -45,7 +45,11 @@ export const Button: FC<ButtonProps> = (props) => {
     return (
         <button
             {...otherProps}
-            className={classNames(styles.button, [className, styles[variant], styles[size]], mods)}
+            className={classNames(
+                styles.button,
+                [className, styles[variant], styles[size]],
+                mods
+            )}
         >
             {children}
         </button>

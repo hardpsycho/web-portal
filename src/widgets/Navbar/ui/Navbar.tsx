@@ -9,9 +9,7 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = ({ className = '' }) => {
     return (
         <header className={classNames(styles.navbar, [className])}>
-            <div className={classNames(styles.menu)}>
-                /
-            </div>
+            <div className={classNames(styles.menu)}>/</div>
         </header>
     )
 }

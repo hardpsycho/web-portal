@@ -39,15 +39,11 @@ export const Sidebar: FC<SidebarProps> = ({ className = '' }) => {
                     <div className={styles.linkIcon}>
                         <HomeIcon />
                     </div>
-                    {
-                        collapsed 
-                        ?
-                            ''
-                        :
-                            <div className={styles.linkText}>
-                                {t('главная')}
-                            </div>
-                    }
+                    {collapsed ? (
+                        ''
+                    ) : (
+                        <div className={styles.linkText}>{t('главная')}</div>
+                    )}
                 </AppLink>
                 <AppLink
                     variant={AppLinkVariant.INVERTED_PRIMARY}
@@ -57,15 +53,11 @@ export const Sidebar: FC<SidebarProps> = ({ className = '' }) => {
                     <div className={styles.linkIcon}>
                         <AboutIcon />
                     </div>
-                    {
-                        collapsed 
-                        ?
-                            ''
-                        :
-                            <div className={styles.linkText}>
-                                {t('о_нас')}
-                            </div>
-                    }
+                    {collapsed ? (
+                        ''
+                    ) : (
+                        <div className={styles.linkText}>{t('о_нас')}</div>
+                    )}
                 </AppLink>
             </div>
             <Button
@@ -75,13 +67,13 @@ export const Sidebar: FC<SidebarProps> = ({ className = '' }) => {
                 square
                 size={ButtonSize.L}
             >
-                { collapsed ? '>' : '<' }
+                {collapsed ? '>' : '<'}
             </Button>
             <div className={classNames(styles.switchers)}>
                 <ThemeSwitcher />
                 <LangSwitcher
                     short={collapsed}
-                    className={styles.langSwitcher} 
+                    className={styles.langSwitcher}
                 />
             </div>
         </div>

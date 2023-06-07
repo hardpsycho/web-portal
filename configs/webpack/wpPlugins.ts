@@ -20,8 +20,7 @@ export function getWpPlugins({
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: isDev
-        }),
-        
+        })
     ]
 
     if (isDev) {

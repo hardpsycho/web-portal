@@ -8,7 +8,10 @@ interface LangSwitcherProps {
     short?: boolean
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = ({ className = '', short }) => {
+export const LangSwitcher: FC<LangSwitcherProps> = ({
+    className = '',
+    short
+}) => {
     const { t, i18n } = useTranslation()
 
     const changeTranslate = async (): Promise<void> => {
