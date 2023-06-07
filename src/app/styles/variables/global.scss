@@ -1,6 +1,11 @@
 :root {
     --font-family-main: 'Arimo', sans-serif;
 
+    // очень маленький шрифт
+    --font-size-s: 16px;
+    --font-line-s: 24px;
+    --font-s: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
     // маленький шрифт
     --font-size-m: 16px;
     --font-line-m: 24px;
@@ -12,6 +17,11 @@
     --font-l: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
 
     // большой шрифт
+    --font-size-xl: 32px;
+    --font-line-xl: 40px;
+    --font-xl: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+    // размеры ui элементов
     --navbar-height: 50px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;

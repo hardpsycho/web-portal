@@ -3,13 +3,13 @@ import { AboutPage } from 'pages/AboutPage'
 import { MainPage } from 'pages/MainPage'
 import { NotFoundPage } from 'pages/NotFoundPage'
 
-const AppRoutes = {
+export const AppRoutes = {
     MAIN: '/',
     ABOUT: '/about',
     NOT_FOUND: '/*'
 } as const
 
-type AppRoutes = (typeof AppRoutes)[keyof typeof AppRoutes]
+export type AppRoutes = (typeof AppRoutes)[keyof typeof AppRoutes]
 
 interface RouterConfiguration {
     path: AppRoutes

@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { CircleLoader } from 'shared/ui/CircleLoader'
-import { routerConfig } from '../config/routerConfig'
+import { routerConfig } from 'shared/config/router/config/routerConfig'
 
 export const AppRouter = () => {
     return (

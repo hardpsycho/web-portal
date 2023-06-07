@@ -53,17 +53,17 @@
 }
 
 .small {
-    font-size: var(--font-s);
+    font: var(--font-s);
 }
 
 .middle {
-    font-size: var(--font-m);
+    font: var(--font-m);
 }
 
 .large {
-    font-size: var(--font-l);
+    font: var(--font-l);
 }
 
 .extra-large {
-    font-size: var(--font-xl);
+    font: var(--font-xl);
 }

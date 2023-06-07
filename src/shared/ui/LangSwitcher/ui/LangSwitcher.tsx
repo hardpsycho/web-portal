@@ -5,9 +5,10 @@ import { Button, ButtonVariant } from 'shared/ui/Button'
 
 interface LangSwitcherProps {
     className?: string
+    short?: boolean
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = ({ className = '' }) => {
+export const LangSwitcher: FC<LangSwitcherProps> = ({ className = '', short }) => {
     const { t, i18n } = useTranslation()
 
     const changeTranslate = async (): Promise<void> => {
@@ -20,7 +21,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className = '' }) => {
             variant={ButtonVariant.CLEAR}
             onClick={changeTranslate}
         >
-            {t('язык')}
+            {t(short ? 'сокращенный_язык' : 'язык')}
         </Button>
     )
 }

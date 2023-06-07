@@ -79,8 +79,8 @@ ClearSizeXl.args = {
     variant: ButtonVariant.CLEAR
 }
 
-export const Outline = Template.bind({})
-Outline.args = {
+export const OutlineSizeXl = Template.bind({})
+OutlineSizeXl.args = {
     variant: ButtonVariant.OUTLINE,
     size: ButtonSize.XL
 }
