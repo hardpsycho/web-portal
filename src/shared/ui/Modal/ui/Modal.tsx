@@ -67,8 +67,6 @@ export const Modal: FC<ModalProps> = ({
         }
     }, [isOpen, onKeyDown])
 
-    if (!isOpen) return null
-
     return (
         <Portal>
             <div className={classNames(styles.modal, [className], mods)}>
