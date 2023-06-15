@@ -1,7 +1,6 @@
+import type { ButtonHTMLAttributes, FC } from 'react'
 import { classNames } from 'shared/libs/classNames'
 import styles from './Button.m.scss'
-
-import type { ButtonHTMLAttributes, FC } from 'react'
 
 export const ButtonVariant = {
     CLEAR: 'clear',

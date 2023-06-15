@@ -1,10 +1,10 @@
 import { ReactElement, Suspense } from 'react'
 import { Story } from '@storybook/react'
-import { ThemeProvider } from 'app/providers/ThemeProvider'
-import 'app/styles/index.scss'
 import { MemoryRouter } from 'react-router-dom'
 import { I18nextProvider } from 'react-i18next'
+import { ThemeProvider } from 'app/providers/ThemeProvider'
 import i18n from 'shared/config/i18n/config'
+import 'app/styles/index.scss'
 
 export function ProvidersDecorator(Story: Story): ReactElement {
     return (

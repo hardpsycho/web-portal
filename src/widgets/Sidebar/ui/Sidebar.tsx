@@ -6,10 +6,10 @@ import { ButtonSize } from 'shared/ui/Button/ui/Button'
 import { LangSwitcher } from 'shared/ui/LangSwitcher/ui/LangSwitcher'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
 import { AppLink, AppLinkVariant } from 'shared/ui/AppLink'
-import styles from './Sidebar.m.scss'
 import { AppRoutes } from 'shared/config/router/config/routerConfig'
 import AboutIcon from 'shared/assets/icons/about.svg'
 import HomeIcon from 'shared/assets/icons/home.svg'
+import styles from './Sidebar.m.scss'
 
 interface SidebarProps {
     className?: string

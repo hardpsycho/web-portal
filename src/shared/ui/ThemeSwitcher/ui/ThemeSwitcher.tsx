@@ -1,5 +1,5 @@
-import { classNames } from 'shared/libs/classNames'
 import { type FC } from 'react'
+import { classNames } from 'shared/libs/classNames'
 import { useTheme, Theme } from 'app/providers/ThemeProvider'
 import ThemeIconDark from 'shared/assets/icons/theme-dark.svg'
 import ThemeIconLight from 'shared/assets/icons/theme-light.svg'

@@ -1,7 +1,7 @@
 import { type FC } from 'react'
+import { Link, LinkProps } from 'react-router-dom'
 import { classNames } from 'shared/libs/classNames'
 import styles from './AppLink.m.scss'
-import { Link, LinkProps } from 'react-router-dom'
 
 export const AppLinkVariant = {
     PRIMARY: 'primary',

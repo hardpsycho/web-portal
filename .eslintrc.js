@@ -11,7 +11,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
-        'plugin:storybook/recommended'
+        'plugin:storybook/recommended',
+        'plugin:import/recommended'
     ],
     parser: '@typescript-eslint/parser',
     root: true,
@@ -26,7 +27,8 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-        'react-hooks' // плагин eslint-plugin-react-hooks
+        'react-hooks', // плагин eslint-plugin-react-hooks
+        'import'
     ],
     ignorePatterns: ['node_modules', 'build', '.eslintrc.js'],
     settings: {
@@ -64,7 +66,11 @@ module.exports = {
             // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
             'Hyperlink',
             { name: 'Link', linkAttribute: 'to' }
-        ]
+        ],
+        'import/resolver': {
+            typescript: true,
+            node: true
+        }
     },
     rules: {
         '@typescript-eslint/no-misused-promises': [
@@ -76,6 +82,24 @@ module.exports = {
             }
         ],
         'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn'
+        'react-hooks/exhaustive-deps': 'warn',
+        'import/no-unresolved': 'error', // // turn on errors for missing imports
+        'import/order': [
+            2,
+            {
+                groups: [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index',
+                    'object'
+                ],
+                warnOnUnassignedImports: true,
+                distinctGroup: true
+            }
+        ],
+        'import/no-named-as-default-member': 0
     }
 }
