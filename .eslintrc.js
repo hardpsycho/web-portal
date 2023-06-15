@@ -25,8 +25,8 @@ module.exports = {
     },
     plugins: [
         'react',
-        '@typescript-eslint'
-        // 'react-hooks' // плагин eslint-plugin-react-hooks
+        '@typescript-eslint',
+        'react-hooks' // плагин eslint-plugin-react-hooks
     ],
     ignorePatterns: ['node_modules', 'build', '.eslintrc.js'],
     settings: {
@@ -74,6 +74,8 @@ module.exports = {
                     attributes: false
                 }
             }
-        ]
+        ],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn'
     }
 }
