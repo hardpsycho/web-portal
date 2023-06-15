@@ -5,5 +5,8 @@
     "о_нас": "About page",
     "страница_не_найдена": "Page not found",
     "страница_с_ошибкой": "Something went wrong. Try reload page please",
-    "обновить": "Reload"
+    "обновить": "Reload",
+    "войти": "Log in",
+    "имя": "Name",
+    "пароль": "Password"
 }
