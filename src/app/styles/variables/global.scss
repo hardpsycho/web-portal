@@ -4,7 +4,7 @@
     // очень маленький шрифт
     --font-size-s: 16px;
     --font-line-s: 24px;
-    --font-s: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
 
     // маленький шрифт
     --font-size-m: 16px;
@@ -14,15 +14,21 @@
     // средний шрифт
     --font-size-l: 24px;
     --font-line-l: 32px;
-    --font-l: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
     // большой шрифт
     --font-size-xl: 32px;
     --font-line-xl: 40px;
-    --font-xl: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
     // размеры ui элементов
     --navbar-height: 50px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;
+
+    // z - индексы
+    --modal-z-index: 2;
+
+    // цвета
+    --overlay-color: rgb(0 0 0 / 50%);
 }
