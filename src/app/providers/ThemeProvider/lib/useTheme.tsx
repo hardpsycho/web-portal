@@ -14,6 +14,7 @@ export const useTheme = (): UseThemeReturn => {
     }
 
     const { currentTheme, setTheme } = ThemeContextData
+    document.body.className = currentTheme
     const newTheme = currentTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
 
     const toggleTheme = () => {

@@ -12,7 +12,7 @@ export const App = () => {
     const { currentTheme } = useTheme()
 
     return (
-        <div className={classNames('app', [currentTheme])}>
+        <div className={classNames('app')}>
             <Suspense fallback={<CircleLoader className="main-loader" />}>
                 <Navbar />
                 <div className={'page'}>
