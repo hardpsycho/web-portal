@@ -4,7 +4,7 @@ import { Sidebar } from './Sidebar'
 
 describe('Sidebar', () => {
     test('first test', () => {
-        renderWithProviders(<Sidebar />)
+        renderWithProviders(<Sidebar />, {})
         expect(screen.getByTestId('sidebar')).toBeInTheDocument()
     })
 })
