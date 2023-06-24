@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3000",
+    "start:dev:server": "node ./json-server/server.js",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint **/*.{ts,tsx}",
@@ -52,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
     "babel-jest": "^29.5.0",
+    "body-parser": "^1.20.2",
     "css-loader": "^6.6.0",
     "eslint": "^8.41.0",
     "eslint-import-resolver-typescript": "^3.5.5",
@@ -61,6 +63,7 @@
     "eslint-plugin-storybook": "^0.6.12",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.5.1",
+    "json-server": "^0.17.3",
     "loki": "^0.28.1",
     "mini-css-extract-plugin": "^2.5.3",
     "prettier": "2.8.8",

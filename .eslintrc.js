@@ -30,7 +30,7 @@ module.exports = {
         'react-hooks', // плагин eslint-plugin-react-hooks
         'import'
     ],
-    ignorePatterns: ['node_modules', 'build', '.eslintrc.js'],
+    ignorePatterns: ['node_modules', 'build', '.eslintrc.js', 'json-server'],
     settings: {
         react: {
             createClass: 'createReactClass', // Regex for Component Factory to use,
