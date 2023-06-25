@@ -8,7 +8,6 @@ import 'shared/config/i18n/config'
 import './styles/index.scss'
 
 export const App = () => {
-
     return (
         <div className={classNames('app')}>
             <Suspense fallback={<CircleLoader className="main-loader" />}>

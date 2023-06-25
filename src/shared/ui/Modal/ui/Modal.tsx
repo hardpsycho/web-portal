@@ -12,7 +12,7 @@ import styles from './Modal.m.scss'
 
 interface ModalProps {
     className?: string
-    isOpen: boolean
+    isOpen?: boolean
     onClose?: () => void
 }
 
@@ -21,7 +21,7 @@ const CLOSE_DELAY = 300
 export const Modal: FC<ModalProps> = ({
     className = '',
     children,
-    isOpen,
+    isOpen = false,
     onClose
 }) => {
     const [isClosing, setIsClosing] = useState<boolean>(false)
