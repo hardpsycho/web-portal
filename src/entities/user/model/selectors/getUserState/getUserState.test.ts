@@ -9,7 +9,8 @@ describe('getUserState', () => {
         }
         const userState = getUserState(state as StateSchema)
         expect(userState).toStrictEqual({
-            isAuth: true, userInfo: { id: 1, name: 'Vasya' }
+            isAuth: true,
+            userInfo: { id: 1, name: 'Vasya' }
         })
     })
 
@@ -19,7 +20,8 @@ describe('getUserState', () => {
         }
         const userState = getUserState(state as StateSchema)
         expect(userState).not.toStrictEqual({
-            isAuth: true, userInfo: { id: 1, name: 'Ivan' }
+            isAuth: true,
+            userInfo: { id: 1, name: 'Ivan' }
         })
     })
 })
