@@ -2,10 +2,11 @@ const jsonServer = require('json-server')
 const bodyParser = require('body-parser')
 const fs = require('fs')
 const path = require('path')
+const cors = require('cors')
 
 const server = jsonServer.create()
-const router = jsonServer.router(path.join(__dirname, 'db.json'))
 
+server.use(cors())
 server.use(async (req, res, next) => {
     await Promise.resolve(
         setTimeout(() => {
@@ -22,10 +23,11 @@ server.use((req, res, next) => {
     next()
 })
 
-server.use(router)
 server.use(bodyParser.json())
 
 server.post('/login', (req, res) => {
+    console.log(req.body)
+    console.log(req.headers)
     const { username, password } = req.body
     let db = JSON.parse(fs.readFileSync(path.resolve(__dirname, './db.json')))
     const { users } = db
@@ -35,6 +37,7 @@ server.post('/login', (req, res) => {
     )
 
     if (userFromDb) {
+        delete userFromDb.password
         return res.json(userFromDb)
     }
 
