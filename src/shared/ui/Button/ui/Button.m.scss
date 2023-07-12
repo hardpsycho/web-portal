@@ -67,3 +67,7 @@
 .extra-large {
     font: var(--font-xl);
 }
+
+.button:disabled {
+    opacity: .5;
+}

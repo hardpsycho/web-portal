@@ -25,6 +25,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant
     square?: boolean
     size?: ButtonSize
+    disabled?: boolean
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -38,7 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
     } = props
 
     const mods: Record<string, boolean> = {
-        [styles.square]: square
+        [styles.square]: square,
     }
 
     return (
