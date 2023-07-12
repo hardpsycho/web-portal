@@ -1,5 +1,6 @@
 {
   "login": "Войти",
   "password": "Пароль",
-  "your_name": "Ваше имя"
+  "your name": "Ваше имя",
+  "incorrect_password": "Неправильный логин или пароль"
 }

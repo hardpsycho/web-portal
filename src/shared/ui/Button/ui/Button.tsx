@@ -39,7 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
     } = props
 
     const mods: Record<string, boolean> = {
-        [styles.square]: square,
+        [styles.square]: square
     }
 
     return (

@@ -1,12 +1,14 @@
 {
-    "язык": "Русский",
-    "сокращенный_язык": "RU",
-    "главная": "Main page",
-    "о_нас": "About page",
-    "страница_не_найдена": "Page not found",
-    "страница_с_ошибкой": "Something went wrong. Try reload page please",
-    "обновить": "Reload",
-    "войти": "Log in",
-    "имя": "Name",
-    "пароль": "Password"
+  "язык": "Русский",
+  "сокращенный_язык": "RU",
+  "главная": "Main page",
+  "о_нас": "About page",
+  "страница_не_найдена": "Page not found",
+  "страница_с_ошибкой": "Something went wrong. Try reload page please",
+  "обновить": "Reload",
+  "login": "Log in",
+  "logout": "Log out",
+  "имя": "Name",
+  "пароль": "Password",
+  "unknown_error": "Unknown error"
 }

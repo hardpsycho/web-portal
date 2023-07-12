@@ -53,7 +53,8 @@ export default {
 
     moduleNameMapper: {
         '\\.s?css$': '<rootDir>/configs//jest/styleMock.ts',
-        '\\.svg$': '<rootDir>/configs//jest/emptyComponent.tsx'
+        '\\.svg$': '<rootDir>/configs//jest/emptyComponent.tsx',
+        axios: 'axios/dist/node/axios.cjs'
     },
 
     // A set of global variables that need to be available in all test environments

@@ -1,5 +1,6 @@
 {
   "login": "Login",
-  "your_name": "Your name",
-  "password": "Password"
+  "your name": "Your name",
+  "password": "Password",
+  "incorrect_password": "Incorrect login or password"
 }
